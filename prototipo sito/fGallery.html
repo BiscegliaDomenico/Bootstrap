@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <style>
+            .mySlides{
+                display : none;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel(){
+                var i;
+                var x = document.getElementByClassName("mySlides");
+                for(i = 0; i < x.length; i ++){
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if(myIndex > x.length){
+                    myIndex = 1;
+                }
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 2000);
+            }
+        </script>
+        <div class = "w3-content w3-section col-sm-6" style = "max-width : 500px; float : left">
+            <img class = "mySlides" src = "imgGal1.jpg" style = "width : 100%">
+            <img class = "mySlides" src = "imgGal2.jpg" style = "width : 100%">
+            <img class = "mySlides" src = "imgGal3.jpg" style = "width : 100%">
+        </div>
+    </body>
+</html>
